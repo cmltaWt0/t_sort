@@ -5,7 +5,7 @@ import json
 from datetime import datetime, timedelta
 
 
-def index(request):
+def json_form(request):
     data = request.GET.get('json')
     if data is None or not data:
         return JsonResponse({'error': 'json data is not specified'})

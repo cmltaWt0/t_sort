@@ -1,8 +1,10 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from django.views.generic import TemplateView
+
 
 urlpatterns = patterns('',
-    url(r'^$', 't_sort.views.index', name='index'),
-
-    #url(r'^admin/', include(admin.site.urls)),
+	url(r'^$', TemplateView.as_view(template_name='index.html'), name='index'),
+	url(r'^/json_form$', 't_sort.views.json_form', name='json_form'),
+	url(r'^admin/', include(admin.site.urls)),
 )

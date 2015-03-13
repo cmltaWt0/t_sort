@@ -31,4 +31,4 @@ class HTTPRequestTest(TSortTestCase):
         print(response.content)
         # self.assertEqual(response.templates[0].name, 'ssc/login.html')
 
- 
+
